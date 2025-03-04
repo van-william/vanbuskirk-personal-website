@@ -14,6 +14,7 @@ import BlogPage from "./pages/Blog";
 import BlogPostPage from "./pages/BlogPost";
 import PhotographyPage from "./pages/Photography";
 import ContactPage from "./pages/Contact";
+import ContentGuidePage from "./pages/ContentGuide";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -34,6 +35,7 @@ const App = () => (
               <Route path="/blog/:slug" element={<BlogPostPage />} />
               <Route path="/photography" element={<PhotographyPage />} />
               <Route path="/contact" element={<ContactPage />} />
+              <Route path="/content-guide" element={<ContentGuidePage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Layout>

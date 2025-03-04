@@ -1,28 +1,76 @@
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
-import { blogPosts } from "@/data/blog-posts";
-import { parseMarkdown, formatDate } from "@/utils/markdown";
+import { parseMarkdown, formatDate, BlogPost as BlogPostType } from "@/utils/markdown";
+import { loadBlogPost } from "@/utils/content-loader";
 import { Badge } from "@/components/ui/badge";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Skeleton } from "@/components/ui/skeleton";
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
-  
-  // Find the blog post with the matching slug
-  const post = blogPosts.find(post => post.slug === slug);
+  const [post, setPost] = useState<BlogPostType | null>(null);
+  const [loading, setLoading] = useState(true);
   
   useEffect(() => {
-    // If the post doesn't exist, redirect to the blog page
-    if (!post) {
-      navigate("/blog");
+    async function fetchPost() {
+      if (!slug) return;
+      
+      try {
+        setLoading(true);
+        const fetchedPost = await loadBlogPost(slug);
+        
+        if (fetchedPost) {
+          setPost(fetchedPost);
+        } else {
+          // If the post doesn't exist, redirect to the blog page
+          navigate("/blog");
+        }
+      } catch (error) {
+        console.error("Error loading blog post:", error);
+        navigate("/blog");
+      } finally {
+        setLoading(false);
+      }
     }
+    
+    fetchPost();
     
     // Scroll to top when the component mounts
     window.scrollTo(0, 0);
-  }, [post, navigate]);
+  }, [slug, navigate]);
+  
+  if (loading) {
+    return (
+      <div className="animate-fade-in">
+        <div className="pt-16 pb-10 lg:pt-20 lg:pb-14 border-b">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto">
+              <Skeleton className="h-10 w-32 mb-8" />
+              <Skeleton className="h-12 w-full mb-4" />
+              <Skeleton className="h-6 w-48" />
+            </div>
+          </div>
+        </div>
+        <div className="py-6 lg:py-10">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto">
+              <div className="space-y-4">
+                <Skeleton className="h-6 w-full" />
+                <Skeleton className="h-6 w-5/6" />
+                <Skeleton className="h-6 w-4/6" />
+                <Skeleton className="h-24 w-full" />
+                <Skeleton className="h-6 w-full" />
+                <Skeleton className="h-6 w-3/4" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
   
   if (!post) return null;
   

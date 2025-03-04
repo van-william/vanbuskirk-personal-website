@@ -1,15 +1,35 @@
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { blogPosts } from "@/data/blog-posts";
-import { sortBlogPostsByDate } from "@/utils/markdown";
+import { sortBlogPostsByDate, BlogPost } from "@/utils/markdown";
+import { loadBlogPosts } from "@/utils/content-loader";
 import { BlogCard } from "@/components/ui/blog-card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { Skeleton } from "@/components/ui/skeleton";
 
 export function LatestPosts() {
+  const [posts, setPosts] = useState<BlogPost[]>([]);
+  const [loading, setLoading] = useState(true);
+  
+  useEffect(() => {
+    async function fetchPosts() {
+      try {
+        setLoading(true);
+        const fetchedPosts = await loadBlogPosts();
+        setPosts(fetchedPosts);
+      } catch (error) {
+        console.error("Error loading blog posts:", error);
+      } finally {
+        setLoading(false);
+      }
+    }
+    
+    fetchPosts();
+  }, []);
+  
   // Display only the most recent 2 posts
-  const latestPosts = sortBlogPostsByDate(blogPosts).slice(0, 2);
+  const latestPosts = sortBlogPostsByDate(posts).slice(0, 2);
 
   return (
     <section className="py-16 md:py-24">
@@ -31,11 +51,24 @@ export function LatestPosts() {
           </Button>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {latestPosts.map((post) => (
-            <BlogCard key={post.id} post={post} />
-          ))}
-        </div>
+        {loading ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {[1, 2].map((i) => (
+              <div key={i} className="flex flex-col space-y-3">
+                <Skeleton className="h-[200px] w-full rounded-lg" />
+                <Skeleton className="h-6 w-3/4" />
+                <Skeleton className="h-4 w-1/2" />
+                <Skeleton className="h-20 w-full" />
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {latestPosts.map((post) => (
+              <BlogCard key={post.id} post={post} />
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );
