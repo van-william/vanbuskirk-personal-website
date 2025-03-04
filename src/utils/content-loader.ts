@@ -1,4 +1,58 @@
 
+import { BlogPost } from "@/utils/markdown";
+import { Photo } from "@/data/photos";
+
+// Dynamically import all blog posts
+export async function loadBlogPosts(): Promise<BlogPost[]> {
+  try {
+    // List of blog post slugs (filenames without the .ts extension)
+    const slugs = [
+      "art-of-minimalist-design",
+      "building-photography-portfolio",
+      "getting-started-with-markdown"
+    ];
+    
+    const posts: BlogPost[] = [];
+    
+    // Load each blog post by slug
+    for (const slug of slugs) {
+      const post = await loadBlogPost(slug);
+      if (post) {
+        posts.push(post);
+      }
+    }
+    
+    return posts;
+  } catch (error) {
+    console.error("Error loading blog posts:", error);
+    return [];
+  }
+}
+
+// Load a single blog post by slug
+export async function loadBlogPost(slug: string): Promise<BlogPost | null> {
+  try {
+    // Dynamic import of the blog post file
+    const module = await import(`@/data/blog/${slug}.ts`);
+    return module.post;
+  } catch (error) {
+    console.error(`Error loading blog post ${slug}:`, error);
+    return null;
+  }
+}
+
+// Load all photos
+export async function loadPhotos(): Promise<Photo[]> {
+  try {
+    // In a real app, this would load from a directory or API
+    const { photos } = await import('@/data/photos');
+    return photos;
+  } catch (error) {
+    console.error("Error loading photos:", error);
+    return [];
+  }
+}
+
 // Update the contentManagementGuide to reflect the new file structure
 export const contentManagementGuide = {
   addingBlogPost: `
