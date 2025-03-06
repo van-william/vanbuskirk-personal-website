@@ -24,7 +24,7 @@ const About = () => {
             />
           </div>
           <div>
-            <h2 className="text-2xl md:text-3xl font-bold mb-6">Hello, I'm Your Name</h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-6">Hello, I'm William VanBuskirk</h2>
             <p className="text-lg mb-6 text-muted-foreground">
               I'm a passionate designer and developer with over 5 years of experience creating digital products that are both beautiful and functional. I specialize in web development, user interface design, and content creation.
             </p>
