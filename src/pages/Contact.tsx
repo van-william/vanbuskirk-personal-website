@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { Button } from "@/components/ui/button";
@@ -7,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/components/ui/use-toast";
 import { Github, Linkedin, Mail, MapPin, Twitter } from "lucide-react";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -26,12 +26,24 @@ const Contact = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
   
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
+
+    try {
+      await emailjs.send(
+        import.meta.env.VITE_EMAIL_JS_SERVICE_ID,
+        import.meta.env.VITE_EMAIL_JS_TEMPLATE_ID,
+        {
+          subject: formData.subject,
+          name: formData.name,
+          message: formData.message,
+          email: formData.email,
+          to_email: 'william.n.vanbuskirk@gmail.com',
+        },
+        import.meta.env.VITE_EMAIL_JS_PUBLIC_KEY
+      );
+
       toast({
         title: "Message sent!",
         description: "Thanks for reaching out. I'll get back to you soon.",
@@ -42,8 +54,16 @@ const Contact = () => {
         subject: "",
         message: "",
       });
+    } catch (error) {
+      console.error('EmailJS Error:', error);
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1500);
+    }
   };
 
   return (
@@ -64,18 +84,10 @@ const Contact = () => {
               
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <Mail className="h-6 w-6 mt-1 text-muted-foreground" />
-                  <div>
-                    <h3 className="font-medium">Email</h3>
-                    <p className="text-muted-foreground">your.email@example.com</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
                   <MapPin className="h-6 w-6 mt-1 text-muted-foreground" />
                   <div>
                     <h3 className="font-medium">Location</h3>
-                    <p className="text-muted-foreground">City, Country</p>
+                    <p className="text-muted-foreground">Chicago, IL</p>
                   </div>
                 </div>
                 
@@ -83,17 +95,17 @@ const Contact = () => {
                   <h3 className="font-medium mb-4">Connect</h3>
                   <div className="flex space-x-4">
                     <Button variant="outline" size="icon" asChild>
-                      <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                      <a href="https://twitter.com/van_bus_kirk" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
                         <Twitter className="h-5 w-5" />
                       </a>
                     </Button>
                     <Button variant="outline" size="icon" asChild>
-                      <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                      <a href="https://github.com/van-william" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                         <Github className="h-5 w-5" />
                       </a>
                     </Button>
                     <Button variant="outline" size="icon" asChild>
-                      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                      <a href="https://linkedin.com/in/wvanbuskirk/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                         <Linkedin className="h-5 w-5" />
                       </a>
                     </Button>
@@ -103,7 +115,14 @@ const Contact = () => {
             </div>
             
             <div>
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form
+                name="contact"
+                data-netlify="true"
+                method="POST"
+                onSubmit={handleSubmit}
+                className="space-y-6"
+              >
+                <input type="hidden" name="form-name" value="contact" />
                 <div className="space-y-2">
                   <Label htmlFor="name">Name</Label>
                   <Input

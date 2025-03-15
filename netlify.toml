@@ -1,0 +1,11 @@
+[build]
+  command = "npm run build" # or yarn build
+  publish = "dist" # or build/out/public depending on your framework
+  
+[dev]
+  command = "npm run dev" # or yarn dev
+  
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200 
