@@ -83,13 +83,13 @@ const Contact = () => {
               </p>
               
               <div className="space-y-6">
-                <div className="flex items-start space-x-4">
+                {/* <div className="flex items-start space-x-4">
                   <MapPin className="h-6 w-6 mt-1 text-muted-foreground" />
                   <div>
                     <h3 className="font-medium">Location</h3>
                     <p className="text-muted-foreground">Chicago, IL</p>
                   </div>
-                </div>
+                </div> */}
                 
                 <div className="pt-6 border-t">
                   <h3 className="font-medium mb-4">Connect</h3>

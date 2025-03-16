@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { cn } from "@/lib/utils";
@@ -45,7 +44,7 @@ export function Navbar() {
               className="text-lg font-medium tracking-tight"
               aria-label="Home"
             >
-              Your Name
+              William VanBuskirk
             </NavLink>
           </div>
 

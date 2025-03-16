@@ -20,7 +20,7 @@ const Projects = () => {
     <>
       <PageHeader
         title="Projects"
-        description="A collection of my work across web development, design, and creative coding."
+        description="A collection of side projects across analytics, industrial IoT, and more."
       />
       
       <section className="py-12">

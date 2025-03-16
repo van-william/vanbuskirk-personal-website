@@ -1,10 +1,9 @@
-
 import React from "react";
 import { Project } from "@/data/projects";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, FileText, BookOpen, Book, Newspaper, FileSpreadsheet } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface ProjectCardProps {
@@ -36,19 +35,19 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
         </div>
       </CardContent>
       <CardFooter className="flex gap-2">
-        {project.link && (
-          <Button variant="outline" size="sm" className="gap-2" asChild>
-            <a href={project.link} target="_blank" rel="noopener noreferrer">
-              <ExternalLink className="h-4 w-4" />
-              <span>Visit</span>
-            </a>
-          </Button>
-        )}
         {project.githubLink && (
           <Button variant="outline" size="sm" className="gap-2" asChild>
             <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
               <Github className="h-4 w-4" />
               <span>GitHub</span>
+            </a>
+          </Button>
+        )}
+        {project.articleLink && (
+          <Button variant="outline" size="sm" className="gap-2" asChild>
+            <a href={project.articleLink} target="_blank" rel="noopener noreferrer">
+              <FileText className="h-4 w-4" />
+              <span>Article</span>
             </a>
           </Button>
         )}

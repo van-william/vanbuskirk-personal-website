@@ -10,10 +10,10 @@ export function HeroSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-tight mb-6 animate-fade-in">
-            Minimalist Design, <br/> Maximum Impact
+          William VanBuskirk
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-10 animate-fade-in" style={{ animationDelay: "200ms" }}>
-            Personal website showcasing projects, blog posts, and photography with a focus on clean, elegant design.
+          Lead from a sense of adventure, <br/>  to bring others to new heights
           </p>
           <div className="flex flex-wrap justify-center gap-4 animate-fade-in" style={{ animationDelay: "400ms" }}>
             <Button size="lg" asChild>
