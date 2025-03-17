@@ -1,4 +1,3 @@
-
 import React from "react";
 import { NavLink } from "react-router-dom";
 
@@ -11,8 +10,8 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 className="text-lg font-medium mb-4">William VanBuskirk</h3>
-            <p className="text-sm text-muted-foreground mb-4 max-w-sm">
-              A personal website showcasing projects, blogs, and photography.
+            <p className="text-sm text-muted-foreground mb-4 max-w-sm italic">
+              Leading with adventure
             </p>
           </div>
           

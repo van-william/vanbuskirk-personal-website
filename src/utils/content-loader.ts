@@ -7,9 +7,7 @@ export async function loadBlogPosts(): Promise<BlogPost[]> {
   try {
     // List of blog post slugs (filenames without the .ts extension)
     const slugs = [
-      "art-of-minimalist-design",
-      "building-photography-portfolio",
-      "getting-started-with-markdown"
+      "plant-visits-what-to-look-for",
     ];
     
     const posts: BlogPost[] = [];

@@ -1,9 +1,9 @@
-
 import React, { useState } from "react";
 import { Photo } from "@/data/photos";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { cn } from "@/lib/utils";
+import { Card } from "@/components/ui/card";
 
 interface PhotoCardProps {
   photo: Photo;
@@ -16,37 +16,21 @@ export function PhotoCard({ photo, className }: PhotoCardProps) {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <div 
-          className={cn(
-            "group cursor-pointer overflow-hidden rounded-md bg-muted transition-all duration-300 hover:shadow-md", 
-            className
-          )}
-        >
-          <AspectRatio 
-            ratio={photo.width / photo.height}
-            className="bg-muted"
-          >
-            <div className={cn(
-              "absolute inset-0 bg-muted animate-pulse",
-              isLoaded ? "opacity-0" : "opacity-100"
-            )} />
-            <img
-              src={photo.imageUrl}
-              alt={photo.title}
-              onLoad={() => setIsLoaded(true)}
-              className={cn(
-                "h-full w-full object-cover transition-all duration-700 group-hover:scale-105",
-                isLoaded ? "opacity-100" : "opacity-0"
-              )}
+        <Card className="overflow-hidden h-full">
+          <div className="aspect-video overflow-hidden">
+            <img 
+              src={photo.imageUrl} 
+              alt={photo.title} 
+              className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
             />
-            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4 text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-              <h3 className="text-lg font-medium">{photo.title}</h3>
-              {photo.description && (
-                <p className="text-sm text-white/80">{photo.description}</p>
-              )}
-            </div>
-          </AspectRatio>
-        </div>
+          </div>
+          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4 text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+            <h3 className="text-lg font-medium">{photo.title}</h3>
+            {photo.description && (
+              <p className="text-sm text-white/80">{photo.description}</p>
+            )}
+          </div>
+        </Card>
       </DialogTrigger>
       <DialogContent className="max-w-screen-lg p-0 bg-transparent border-0">
         <div className="relative bg-background rounded-lg overflow-hidden">

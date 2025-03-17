@@ -25,11 +25,11 @@ const About = () => {
           </div>
           <div>
             <h2 className="text-2xl md:text-3xl font-bold mb-6">Hello, I'm William VanBuskirk</h2>
-            <h4 className="text-2xl md:text-3xl font-bold mb-6">Leadership Purpose</h4>
+            <h4 className="text-xl md:text-xl font-bold mb-6">Leadership Purpose</h4>
             <p className="text-lg mb-6 text-muted-foreground">
               Lead from a sense of adventure to bring others to new heights
             </p>
-            <h4 className="text-2xl md:text-3xl font-bold mb-6">Values</h4>
+            <h4 className="text-xl md:text-xl font-bold mb-6">Values</h4>
             <ul className="list-disc pl-5 space-y-2 text-muted-foreground">
               <li>Ambiguity: Curiosity over Fear</li>
               <li>Adversity: Zeal over Pessimism</li>
@@ -69,17 +69,18 @@ const About = () => {
         <h2 className="text-2xl md:text-3xl font-bold mb-12 text-center">Skills & Expertise</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           <div className="p-6 bg-background rounded-lg border shadow-sm">
-            <h3 className="text-xl font-bold mb-4">Build</h3>
+            <h3 className="text-lg font-semibold mb-4">Build</h3>
             <ul className="space-y-2 text-muted-foreground">
               <li>Python</li>
               <li>SQL</li>
               <li>PowerBI, Tableau</li>
               <li>Azure, AWS</li>
               <li>IoT (MQTT, Node-RED, InfluxDB)</li>
+              <li>Machine Learning (SKlearn, Hugging Face, etc.)</li>
             </ul>
           </div>
           <div className="p-6 bg-background rounded-lg border shadow-sm">
-            <h3 className="text-xl font-bold mb-4">Strategize</h3>
+            <h3 className="text-lg font-semibold mb-4">Strategize</h3>
             <ul className="space-y-2 text-muted-foreground">
               <li>Operations Strategy</li>
               <li>Make vs. Buy Strategy</li>
@@ -89,12 +90,13 @@ const About = () => {
             </ul>
           </div>
           <div className="p-6 bg-background rounded-lg border shadow-sm">
-            <h3 className="text-xl font-bold mb-4">Lead</h3>
+            <h3 className="text-lg font-semibold mb-4">Lead</h3>
             <ul className="space-y-2 text-muted-foreground">
               <li>Cloud Partnership Engagement</li>
               <li>ISV Co-Sell Strategy</li>
               <li>Sales Enablement</li>
               <li>Ecosystem Partnerships</li>
+              <li>Technology Partnerships</li>
             </ul>
           </div>
         </div>

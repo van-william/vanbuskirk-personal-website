@@ -44,7 +44,7 @@ const Blog = () => {
     <>
       <PageHeader
         title="Blog"
-        description="Thoughts, tutorials, and insights on design, development, and creativity."
+        description="Thoughts, tutorials, and insights on analytics, iot, operations strategy, and more."
       />
       
       <section className="py-12">
