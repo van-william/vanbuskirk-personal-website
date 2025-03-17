@@ -1,12 +1,12 @@
 [build]
-  command = "npm run build" # or yarn build
-  publish = "dist" # or build/out/public depending on your framework
+  command = "npm run build"
+  publish = "dist"
   
 [dev]
   command = "npm run dev" # or yarn dev
   
 [build.environment]
-  NODE_VERSION = "18.17.0"
+  NODE_VERSION = "20.11.1"
 
 [[redirects]]
   from = "/*"
