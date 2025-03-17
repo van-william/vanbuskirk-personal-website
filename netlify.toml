@@ -6,7 +6,8 @@
   command = "npm run dev" # or yarn dev
   
 [build.environment]
-  NODE_VERSION = "22.14.0"
+  NODE_VERSION = "20.11.1"
+  NPM_VERSION = "10.2.4"
 
 [[redirects]]
   from = "/*"
