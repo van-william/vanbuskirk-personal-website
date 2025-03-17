@@ -5,6 +5,9 @@
 [dev]
   command = "npm run dev" # or yarn dev
   
+[build.environment]
+  NODE_VERSION = "18.17.0"
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
