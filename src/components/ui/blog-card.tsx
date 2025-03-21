@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { BlogPost, formatDate } from "@/utils/markdown";
@@ -15,13 +14,13 @@ export function BlogCard({ post, className }: BlogCardProps) {
   return (
     <Card className={cn("overflow-hidden h-full transition-all duration-300 hover:shadow-md", className)}>
       {post.coverImage && (
-        <div className="aspect-video overflow-hidden">
+        <Link to={`/blog/${post.slug}`} className="block aspect-video overflow-hidden">
           <img 
             src={post.coverImage} 
             alt={post.title} 
             className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
           />
-        </div>
+        </Link>
       )}
       <CardHeader>
         <CardTitle>

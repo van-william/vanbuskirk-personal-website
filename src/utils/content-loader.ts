@@ -5,21 +5,16 @@ import { Photo } from "@/data/photos";
 // Dynamically import all blog posts
 export async function loadBlogPosts(): Promise<BlogPost[]> {
   try {
-    // List of blog post slugs (filenames without the .ts extension)
-    const slugs = [
-      "plant-visits-what-to-look-for",
-    ];
-    
-    const posts: BlogPost[] = [];
-    
-    // Load each blog post by slug
-    for (const slug of slugs) {
-      const post = await loadBlogPost(slug);
-      if (post) {
-        posts.push(post);
-      }
-    }
-    
+    const modules = import.meta.glob("@/data/blog/*.ts");
+
+    const posts: BlogPost[] = await Promise.all(
+      Object.entries(modules).map(async ([path, resolver]) => {
+        const slug = path.split("/").pop()?.replace(".ts", ""); // Extract slug from filename
+        const mod = await resolver();
+        return { ...mod.post, slug };
+      })
+    );
+
     return posts;
   } catch (error) {
     console.error("Error loading blog posts:", error);

@@ -37,13 +37,4 @@ export const projects: Project[] = [
     articleLink: "https://example.com/blog-enginehttps://www.linkedin.com/posts/wvanbuskirk_lesser-known-place-for-interacting-with-llms-activity-7291095099038449664-JVGV",
     githubLink: "https://github.com/van-william/local-llm",
   },
-  {
-    id: "4",
-    title: "Local LLM Chatbot via Streamlit",
-    description: "Simple LLM chatbot via Streamlit",
-    imageUrl: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
-    tags: ["Python", "LLM"],
-    articleLink: "https://example.com/blog-enginehttps://www.linkedin.com/posts/wvanbuskirk_lesser-known-place-for-interacting-with-llms-activity-7291095099038449664-JVGV",
-    githubLink: "https://github.com/van-william/money-in-bible",
-  },
 ];
