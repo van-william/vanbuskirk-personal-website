@@ -4,6 +4,10 @@ import { cn } from "@/lib/utils";
 import { ThemeToggle } from "./ThemeToggle";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useTheme } from "@/hooks/use-theme";
+
+import lightLogo from "@/assets/logo-light.png"; // Light mode logo
+import darkLogo from "@/assets/logo-dark.png"; // Dark mode logo
 
 const navItems = [
   { name: "Home", path: "/" },
@@ -17,6 +21,7 @@ const navItems = [
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { theme } = useTheme(); // Get current theme
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,13 +43,14 @@ export function Navbar() {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-          <div className="flex-shrink-0">
-            <NavLink
-              to="/"
-              className="text-lg font-medium tracking-tight"
-              aria-label="Home"
-            >
-              William VanBuskirk
+          <div className="flex items-center space-x-2 flex-shrink-0">
+            <NavLink to="/" className="flex items-center space-x-2" aria-label="Home">
+            <img
+              src={theme === "dark" ? darkLogo : lightLogo}
+              alt="Logo"
+              className="max-h-8 h-auto w-auto transition-all duration-300"
+            />
+              <span className="text-lg font-medium tracking-tight">William VanBuskirk</span>
             </NavLink>
           </div>
 
