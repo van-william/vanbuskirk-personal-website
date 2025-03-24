@@ -37,6 +37,33 @@ export const photos: Photo[] = [
     width: 1920,
     height: 1276,
   },
+  {
+    id: "4",
+    title: "Hiking in Denali National Park",
+    description: "Backcountry Hiking",
+    imageUrl: "https://images.unsplash.com/photo-1572109646045-7cce4196cfd7",
+    category: "Landscape",
+    width: 1920,
+    height: 1276,
+  },
+  {
+    id: "5",
+    title: "Alaska Mountain Clouds",
+    description: "Orca Spotting in Seward, Alaska",
+    imageUrl: "https://images.unsplash.com/photo-1572109656125-40130b31e757",
+    category: "Landscape",
+    width: 1920,
+    height: 1276,
+  },
+  {
+    id: "6",
+    title: "Florentine Countryside",
+    description: "Foothills in Florence",
+    imageUrl: "https://images.unsplash.com/photo-1572319738785-085298702580",
+    category: "Landscape",
+    width: 1920,
+    height: 1276,
+  },
 ];
 
 export const categories = [...new Set(photos.map(photo => photo.category))];

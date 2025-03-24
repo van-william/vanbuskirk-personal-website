@@ -14,7 +14,7 @@ export const projects: Project[] = [
     id: "1",
     title: "Arduino Opta - Habit Tracker",
     description: "A simple habit tracker built with an Arduino Opta and analog switches",
-    imageUrl: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+    imageUrl: "../project_images/arduino_opta.png", // alt: https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d
     tags: ["IoT", "Tulip", "c++", "Python"],
     articleLink: "https://www.linkedin.com/pulse/iot-lessons-learned-building-screen-free-habit-william-vanbuskirk-rnetc/",
     githubLink: "https://github.com/van-william/Arduino-Opta---Habit-Tracker",
@@ -36,5 +36,21 @@ export const projects: Project[] = [
     tags: ["Python", "LLM"],
     articleLink: "https://example.com/blog-enginehttps://www.linkedin.com/posts/wvanbuskirk_lesser-known-place-for-interacting-with-llms-activity-7291095099038449664-JVGV",
     githubLink: "https://github.com/van-william/local-llm",
+  },
+  {
+    id: "4",
+    title: "Personal Website",
+    description: "Typescript Personal Website",
+    imageUrl: "../project_images/personal_website.png", //"https://images.unsplash.com/photo-1461749280684-dccba630e2f6"
+    tags: ["Typescript", "Javascript"],
+    githubLink: "https://github.com/van-william/vanbuskirk-personal-website",
+  },
+  {
+    id: "5",
+    title: "Operator Feedback App",
+    description: "Translated, Parsed Operator Feedback with Tulip + NVIDIA",
+    imageUrl: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
+    tags: ["Tulip", "LLM"],
+    articleLink: "https://www.linkedin.com/posts/wvanbuskirk_crazy-idea-for-factory-improvement-get-feedback-activity-7308911154171457537-YFVZ",
   },
 ];
