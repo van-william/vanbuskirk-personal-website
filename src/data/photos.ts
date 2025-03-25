@@ -64,6 +64,15 @@ export const photos: Photo[] = [
     width: 1920,
     height: 1276,
   },
+  {
+    id: "7",
+    title: "Winding Roads",
+    description: "Driving in San Francisco",
+    imageUrl: "https://images.unsplash.com/photo-1572268468761-82219408301b",
+    category: "Landscape",
+    width: 1920,
+    height: 1276,
+  },
 ];
 
 export const categories = [...new Set(photos.map(photo => photo.category))];
