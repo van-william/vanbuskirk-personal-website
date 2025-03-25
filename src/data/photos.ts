@@ -73,6 +73,15 @@ export const photos: Photo[] = [
     width: 1920,
     height: 1276,
   },
+  {
+    id: "8",
+    title: "Half Dome",
+    description: "Afternoon hiking in Yosemite",
+    imageUrl: "https://images.unsplash.com/photo-1569764434762-87dbf1a43369",
+    category: "Landscape",
+    width: 1920,
+    height: 1276,
+  },
 ];
 
 export const categories = [...new Set(photos.map(photo => photo.category))];
