@@ -82,6 +82,15 @@ export const photos: Photo[] = [
     width: 1920,
     height: 1276,
   },
+  {
+    id: "9",
+    title: "Venice",
+    description: "On the Water in Venice",
+    imageUrl: "https://images.unsplash.com/photo-1572319914847-a5ca5b12aa85",
+    category: "Landscape",
+    width: 1920,
+    height: 1276,
+  },
 ];
 
 export const categories = [...new Set(photos.map(photo => photo.category))];

@@ -61,5 +61,13 @@ export interface Project {
       tags: ["python"],
       githubLink: "https://github.com/van-william/plastic-list-analysis",
     },
+    {
+      id: "6",
+      title: "IoT + Web3 with Helium",
+      description: "Overview of using Helium blockchain to stream IoT data",
+      imageUrl: "https://images.unsplash.com/photo-1451187580459-43490279c0fa",
+      tags: ["python"],
+      articleLink: "https://medium.com/cryptostars/web3-iot-connect-iot-devices-to-azure-via-helium-network-fdd144d526f1",
+    },
   ];
   
