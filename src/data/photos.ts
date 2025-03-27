@@ -1,4 +1,3 @@
-
 export interface Photo {
   id: string;
   title: string;
@@ -91,6 +90,69 @@ export const photos: Photo[] = [
     width: 1920,
     height: 1276,
   },
+  {
+    id: "10",
+    title: "Mountain Ascent",
+    description: "A challenging climb through rugged terrain reveals nature's raw beauty",
+    imageUrl: "/photography_images/the-climb.jpg",
+    category: "Adventure",
+    width: 1920,
+    height: 1280,
+  },
+  {
+    id: "11",
+    title: "Alpine Exploration",
+    description: "Hiking through misty mountain peaks and valleys",
+    imageUrl: "/photography_images/hiking-mountains.jpg",
+    category: "Landscape",
+    width: 1920,
+    height: 1280,
+  },
+  {
+    id: "12",
+    title: "Urban Nightscape",
+    description: "City lights paint the darkness in a mesmerizing display",
+    imageUrl: "/photography_images/rooftops-at-night.jpg",
+    category: "Urban",
+    width: 1920,
+    height: 1280,
+  },
+  {
+    id: "13",
+    title: "Dancing Kites",
+    description: "Colorful kites soar against a dramatic sky",
+    imageUrl: "/photography_images/kites.jpg",
+    category: "Culture",
+    width: 1920,
+    height: 1280,
+  },
+  {
+    id: "14",
+    title: "Temple Details",
+    description: "Intricate architectural details of an ancient temple",
+    imageUrl: "/photography_images/temple-up-close.jpg",
+    category: "Architecture",
+    width: 1920,
+    height: 1280,
+  },
+  {
+    id: "15",
+    title: "Suzhou Serenity",
+    description: "Traditional Chinese architecture reflects in tranquil waters",
+    imageUrl: "/photography_images/suzhou.jpg",
+    category: "Architecture",
+    width: 1920,
+    height: 1280,
+  },
+  {
+    id: "16",
+    title: "Chinese Garden",
+    description: "Traditional pavilion nestled among lush gardens",
+    imageUrl: "/photography_images/chinese-garden.jpg",
+    category: "Architecture",
+    width: 1920,
+    height: 1280,
+  }
 ];
 
 export const categories = [...new Set(photos.map(photo => photo.category))];
