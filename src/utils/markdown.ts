@@ -1,4 +1,3 @@
-
 import { marked } from "marked";
 import DOMPurify from "dompurify";
 
@@ -39,7 +38,7 @@ export function sortBlogPostsByDate(posts: BlogPost[]): BlogPost[] {
 // Generate excerpt from content
 export function generateExcerpt(content: string, maxLength: number = 150): string {
   // Remove markdown formatting
-  const plainText = content.replace(/[#*`_\[\]]/g, "").trim();
+  const plainText = content.replace(/[#*`_[\]]/g, "").trim();
   if (plainText.length <= maxLength) return plainText;
   
   // Find a good breakpoint

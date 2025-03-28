@@ -69,5 +69,14 @@ export interface Project {
       tags: ["python"],
       articleLink: "https://medium.com/cryptostars/web3-iot-connect-iot-devices-to-azure-via-helium-network-fdd144d526f1",
     },
+    {
+      id: "7",
+      title: "808 Emulator",
+      description: "Built a replica of the Roland TR-808 drum machine with Lovable, Cursor, and Netlify",
+      imageUrl: "https://images.unsplash.com/photo-1451187580459-43490279c0fa",
+      tags: ["Typescript", "LLM", "React"],
+      githubLink: "https://github.com/van-william/beatwave-emulator",
+      articleLink: "https://808-emulator.netlify.app/"
+    },
   ];
   
