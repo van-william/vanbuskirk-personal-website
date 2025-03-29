@@ -152,6 +152,15 @@ export const photos: Photo[] = [
     category: "Architecture",
     width: 1920,
     height: 1280,
+  },
+  {
+    id: "17",
+    title: "Winter Wonderland",
+    description: "Perfect snow in Mt. Rainier",
+    imageUrl: "https://images.unsplash.com/photo-1569768421241-4b8f79bf45a4",
+    category: "Landscape",
+    width: 1920,
+    height: 1280,
   }
 ];
 
