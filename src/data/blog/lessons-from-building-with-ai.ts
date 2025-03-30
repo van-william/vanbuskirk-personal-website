@@ -25,7 +25,7 @@ Here was my overall workflow:
 
 3. **Refinement**: After finalizing the overall user flow and design, I synced the Lovable project to GitHub for further work.
 
-4. **Backend Development**: Using Cursor, I was able to implement specific updates around backend logic, authentication, and Netlify hosting. What was interesting is that I could not only tell the agent what to change but also ask questions about its decisions - context proved crucial here!
+4. **Backend Development**: Using Cursor, I was able to implement specific updates around backend logic, authentication, and Netlify hosting. What was interesting is that I could not only tell the agent what to change but also ask questions about its decisions - context is key!
 
 ## Key Lessons Learned
 
@@ -35,7 +35,7 @@ Perplexity was excellent for getting a high-level understanding of the necessary
 I didn't explore prompt engineering deeply, but I think Perplexity could also help research optimal prompts for Lovable and Cursor.
 
 ### Lovable
-Lovable shined for initial frontend development. The zero-to-one experience was incredibly fast. There was some "fluff" - some experiments resulted in excessive landing pages that looked great but weren't necessary.
+Lovable shined for initial frontend development. The zero-to-one experience was incredibly fast. There was some "fluff" UX - some experiments resulted in excessive landing pages that looked great but weren't necessary.
 
 Comparing starting with Cursor versus Lovable, I found that with Cursor, I needed to be super clear about design, or things came out basic and clunky. With Lovable, I didn't need to be as precise with UI/UX prompting - it usually created something well-designed out of the box.
 
@@ -58,8 +58,8 @@ I realized it's less about communicating complex rules to the AI and more about 
 
 Interestingly, building with AI tools actually increased my desire to learn more about frontend development. Because I made such fast progress, it sparked my curiosity about many aspects of web development.
 
-While I probably won't become a full-stack engineer anytime soon, even learning the basics of web app development has changed how I think about application structure. Using AI tools to build things hones the skill of communicating with what feels like sometimes-intelligent, sometimes-not senior engineers.
+While I probably won't become a full-stack engineer anytime soon, even learning the basics of web app development has changed how I think about application structure.
 
-In the end, the combination of these tools made it possible to create something I wouldn't have been able to build on my own - at least not without months of learning and practice.
+In the end, the combination of these tools made it possible to create something I wouldn't have been able to build on my own, and simply put: that's pretty cool.
 `,
 };
