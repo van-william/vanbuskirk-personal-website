@@ -1,5 +1,11 @@
 import { marked } from "marked";
 import DOMPurify from "dompurify";
+import Prism from "prismjs";
+import "prismjs/themes/prism-tomorrow.css";
+import "prismjs/components/prism-python";
+import "prismjs/components/prism-typescript";
+import "prismjs/components/prism-javascript";
+import "prismjs/components/prism-json";
 
 export interface BlogPost {
   id: string;
@@ -14,6 +20,17 @@ export interface BlogPost {
 
 // Parse markdown content to HTML
 export function parseMarkdown(markdown: string): string {
+  // Configure marked to use Prism for code highlighting
+  marked.setOptions({
+    highlight: function(code, lang) {
+      if (Prism.languages[lang]) {
+        return Prism.highlight(code, Prism.languages[lang], lang);
+      }
+      return code;
+    },
+    langPrefix: 'language-'
+  });
+
   const html = marked.parse(markdown);
   return DOMPurify.sanitize(html);
 }
