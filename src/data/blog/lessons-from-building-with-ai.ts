@@ -5,7 +5,7 @@ export const post: BlogPost = {
   title: "Lessons from Building with AI",
   slug: "lessons-from-building-with-ai",
   date: "2025-03-28",
-  excerpt: "Experience with using Perplexity,Lovable, and Cursor, to build",
+  excerpt: "Experience with using Perplexity, Lovable, and Cursor, to build",
   coverImage: "https://images.unsplash.com/photo-1636690598773-c50645a47aeb",
   tags: ["javascript", "typescript", "react", "llm"],
   content: `
