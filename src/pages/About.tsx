@@ -43,7 +43,7 @@ const About = () => {
               Based in Chicago, I work with clients and companies around the world to bring their visions to life through thoughtful design and clean code.
             </p> */}
             <div className="flex flex-wrap gap-4">
-              <Button asChild>
+              {/* <Button asChild>
                 <a
                   href="https://carrd-public-vanbuskirk.s3.amazonaws.com/Resume_VanBuskirk_06_07_2024.pdf"
                   className="flex items-center gap-2"
@@ -53,7 +53,7 @@ const About = () => {
                   <FileDown className="h-4 w-4" />
                   Download Resume
                 </a>
-              </Button>
+              </Button> */}
               <Button variant="outline" asChild>
                 <Link to="/contact" className="flex items-center gap-2">
                   <Mail className="h-4 w-4" />
