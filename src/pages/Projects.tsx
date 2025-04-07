@@ -1,10 +1,12 @@
-
 import React, { useState } from "react";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { ProjectCard } from "@/components/ui/project-card";
 import { projects } from "@/data/projects";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Code2 } from "lucide-react";
 
 const Projects = () => {
   // Get all unique tags from projects
@@ -64,6 +66,24 @@ const Projects = () => {
               <p className="text-muted-foreground">No projects found with the selected tag.</p>
             </div>
           )}
+          
+          {/* Commented out Architecture Diagrams Section for now
+          <div className="mt-16 p-8 bg-muted rounded-lg">
+            <div className="flex flex-col items-center text-center">
+              <Code2 className="h-12 w-12 mb-4 text-primary" />
+              <h2 className="text-2xl font-bold mb-4">Architecture Diagrams</h2>
+              <p className="text-muted-foreground mb-6 max-w-2xl">
+                Explore additional architecture diagrams. 
+                A collection of system designs, solution architecture, and more across Industry 4.0, IoT, and other use cases.
+              </p>
+              <Button asChild size="lg">
+                <Link to="/architecture-diagrams">
+                  View Diagrams
+                </Link>
+              </Button>
+            </div>
+          </div>
+          */}
         </div>
       </section>
     </>

@@ -1,3 +1,4 @@
+import { Project } from "@/types/project";
 
 export interface Project {
     id: string;
@@ -7,6 +8,7 @@ export interface Project {
     tags: string[];
     articleLink?: string;
     githubLink?: string;
+    link?: string;
   }
   
   export const projects: Project[] = [
@@ -78,5 +80,14 @@ export interface Project {
       githubLink: "https://github.com/van-william/beatwave-emulator",
       articleLink: "https://808-emulator.netlify.app/"
     },
+    // {
+    //   id: "architecture-diagrams",
+    //   title: "Architecture Diagrams",
+    //   description: "Interactive architecture diagrams using Mermaid.js, showcasing various system designs and infrastructure layouts with a focus on cloud and distributed systems.",
+    //   imageUrl: "../project_images/architecture.png",
+    //   tags: ["React", "TypeScript", "Mermaid.js", "System Design"],
+    //   featured: true,
+    //   articleLink: "/architecture-diagrams"
+    // },
   ];
   

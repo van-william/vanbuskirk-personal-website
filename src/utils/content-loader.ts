@@ -1,6 +1,6 @@
-
-import { BlogPost } from "@/utils/markdown";
+import { BlogPost } from "@/types/blog";
 import { Photo } from "@/data/photos";
+import { ArchitectureDiagram } from "@/types/architecture";
 
 // Dynamically import all blog posts
 export async function loadBlogPosts(): Promise<BlogPost[]> {
@@ -10,7 +10,7 @@ export async function loadBlogPosts(): Promise<BlogPost[]> {
     const posts: BlogPost[] = await Promise.all(
       Object.entries(modules).map(async ([path, resolver]) => {
         const slug = path.split("/").pop()?.replace(".ts", ""); // Extract slug from filename
-        const mod = await resolver();
+        const mod = await resolver() as { post: BlogPost };
         return { ...mod.post, slug };
       })
     );
@@ -26,13 +26,25 @@ export async function loadBlogPosts(): Promise<BlogPost[]> {
 export async function loadBlogPost(slug: string): Promise<BlogPost | null> {
   try {
     // Dynamic import of the blog post file
-    const module = await import(`@/data/blog/${slug}.ts`);
+    const module = await import(`@/data/blog/${slug}.ts`) as { post: BlogPost };
     return module.post;
   } catch (error) {
     console.error(`Error loading blog post ${slug}:`, error);
     return null;
   }
 }
+
+// Load all architecture diagrams
+export const loadArchitectureDiagrams = async (): Promise<ArchitectureDiagram[]> => {
+  const { architectureDiagrams } = await import("@/data/architectures");
+  return architectureDiagrams;
+};
+
+// Load a single architecture diagram by slug
+export const loadArchitectureDiagram = async (slug: string): Promise<ArchitectureDiagram | null> => {
+  const diagrams = await loadArchitectureDiagrams();
+  return diagrams.find(diagram => diagram.slug === slug) || null;
+};
 
 // Load all photos
 export async function loadPhotos(): Promise<Photo[]> {
@@ -95,5 +107,36 @@ export const contentManagementGuide = {
    ]
    \`\`\`
 3. The photos will automatically appear in the photography section
+  `,
+
+  addingArchitectureDiagram: `
+# How to Add a New Architecture Diagram
+
+1. Update the \`/src/data/architectures.ts\` file to add a new diagram:
+   \`\`\`typescript
+   export const architectureDiagrams: ArchitectureDiagram[] = [
+     // ... existing diagrams
+     {
+       id: "unique-id",
+       title: "Your Diagram Title",
+       slug: "your-diagram-slug",
+       description: "Description of the architecture",
+       tags: ["tag1", "tag2"],
+       diagram: \`
+         // Your Mermaid diagram code here
+         graph TB
+           A[Component A] --> B[Component B]
+       \`,
+       animation: [ // Optional animations
+         {
+           targets: ["A", "B"], // Component IDs to animate
+           type: "flow", // Animation type: "fade", "pulse", or "flow"
+           duration: 2000 // Duration in milliseconds
+         }
+       ]
+     }
+   ]
+   \`\`\`
+2. The diagram will automatically appear in the architecture diagrams listing
   `
 };
