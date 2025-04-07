@@ -2,11 +2,11 @@ import { BlogPost } from "@/utils/markdown";
 
 export const post: BlogPost = {
   id: "4",
-  title: "Breaking Consulting Habits: Transitioning to Tech Startup Leadership",
+  title: "Breaking Consulting Habits",
   slug: "consulting-bad-habits",
   date: "2025-03-25",
-  excerpt: "Key lessons learned transitioning from consulting to a tech startup serving manufacturers",
-  coverImage: "https://plus.unsplash.com/premium_photo-1684341008404-af4df3d54615",
+  excerpt: "Key lessons learned transitioning from consulting to a tech startup",
+  coverImage: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40",
   tags: ["leadership", "operations"],
   content: `
 ## The Consulting Mindset Trap
