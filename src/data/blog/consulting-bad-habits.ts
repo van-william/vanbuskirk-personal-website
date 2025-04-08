@@ -11,45 +11,34 @@ export const post: BlogPost = {
   content: `
 ## The Consulting Mindset Trap
 
-After years in consulting, transitioning to a tech startup serving manufacturers revealed something 
+After years in consulting, transitioning to a tech startup revealed something 
 unexpected: many habits that made me successful as a consultant were actively hindering my 
-effectiveness in building lasting value. This wasn't just my experience—it's a pattern I've 
-observed in countless professionals making similar transitions.
+effectiveness in building meaningful value.
 
 The real world doesn't need more consulting frameworks. It needs leaders who can create 
 sustainable systems that empower teams to solve real problems for customers.
 
-## The Consulting Habits That Hold Us Back
+## Bad Consulting Habits
 
 ### Short-Term Impact Obsession
 
 Consultants are trained to generate quick wins and visible impact within tight project 
-timelines. While this skill creates impressive presentations, it often comes at the expense 
-of sustainable transformation.
+timelines. While this skill creates thorough, detailed, and compelling presentations, it often comes at the expense 
+of true transformation.
 
 **The Reality**: A 10% improvement that looks good in a deck is far less valuable than 
-building the foundation for a future 10x breakthrough. In a startup serving manufacturers, 
+building the foundation for a future 10x breakthrough. In startups, 
 impact compounds over years, not weeks.
 
 ### Process Over Problems
 
-Consultants excel at building comprehensive documentation, process maps, and operating 
+Consultants excel at building comprehensive documentation, process diagrams, and operating 
 models. These artifacts create the illusion of progress while often missing the fundamental 
 issues.
 
-**The Reality**: Our manufacturing customers need practical solutions to real problems, not 
+**The Reality**: Our customers need practical solutions to real problems, not 
 perfect documentation of broken processes. Success comes from solving core 
 problems first, then documenting what actually works.
-
-### The "Us vs. Them" Mentality
-
-Consulting engagements naturally create a division: consultants arrive to "fix" what the 
-client couldn't. This breeds a subtle superiority complex that can persist long after 
-leaving consulting.
-
-**The Reality**: At our startup, this mentality creates harmful silos. Success requires 
-genuine collaboration where everyone contributes their expertise without hierarchy or ego—
-something impossible when you position yourself as the "expert savior."
 
 ### Superficial Relationship Building
 
@@ -76,9 +65,9 @@ Consulting projects often attempt to tackle multiple workstreams simultaneously 
 prioritization. This approach spreads resources thin and prevents meaningful progress on 
 what truly matters.
 
-**The Reality**: Startup success requires ruthless prioritization. Resources are 
+**The Reality**: Startup success requires ruthless prioritization. Force ranking is a must. Resources are 
 always limited, and attempting to do everything ensures you'll do nothing exceptionally 
-well. Force-ranking priorities isn't optional—it's essential.
+well.
 
 ### The Main Character Syndrome
 
@@ -86,9 +75,9 @@ When companies hire consultants to address their most pressing challenges, it's 
 consultants to develop an inflated sense of importance. This "main character syndrome" can 
 persist well beyond the consulting role.
 
-**The Reality**: In a tech startup serving manufacturers, no single person is the hero of 
+**The Reality**: In a tech startup, no single person is the hero of 
 the story. Success comes from building systems and products where customers can continuously 
-improve their own processes without requiring external heroes.
+improve their own operations without requiring external heroes.
 
 ## The Startup Mindset Shift
 
@@ -136,8 +125,8 @@ purpose and precision rather than volume.
 
 ## Moving Forward: From Consultant to Builder
 
-The transition from consultant to tech startup leader isn't about abandoning everything 
-learned in consulting. Rather, it's about consciously choosing which habits to keep and 
+The transition from consulting to tech startup isn't about abandoning everything 
+learned in consulting; it's about consciously choosing which habits to keep and 
 which to replace.
 
 The skills that make great consultants—analytical thinking, structured problem-solving, and 
@@ -149,7 +138,7 @@ At its core, this transition represents a shift from analyzing and recommending 
 and empowering. It's moving from temporary engagement to sustained commitment. And 
 ultimately, it's evolving from highlighting problems to creating solutions that last.
 
-For tech startups serving manufacturers, this distinction matters. The most valuable teammates aren't those with the most impressive 
+For startups, this distinction matters. The most valuable teammates aren't those with the most impressive 
 frameworks or the quickest analyses—they're the ones who understand how to build capability 
 and drive lasting change.
 `,
