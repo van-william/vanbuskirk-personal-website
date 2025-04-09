@@ -155,5 +155,72 @@ This architecture demonstrates a complete data processing pipeline for IoT senso
 - Sensor data analytics
 - Time-series analysis
 - Business intelligence`
+  },
+  {
+    id: "iceberg-architecture",
+    title: "Iceberg Pipeline",
+    description: "A scalable data ingestion and processing pipeline for IoT sensor data using AWS services",
+    slug: "iceberg-architecture",
+    tags: ["data", "iot", "pipeline", "aws", "analytics"],
+    mermaid: `architecture-beta
+    graph Data Sources
+    A1[Streaming Data - Kafka/Kinesis]
+    A2[Batch Data - S3, RDS, etc.]
+  end
+
+  subgraph Streaming Pipeline
+    B1[Kinesis Data Streams]
+    B2[AWS Lambda / Kinesis Data Firehose]
+    B3[Apache Flink on Kinesis / EMR]
+    B4[Write to Iceberg Table - via Apache Flink Connector]
+  end
+
+  subgraph Batch Pipeline
+    C1[AWS Glue / EMR]
+    C2[ETL Jobs: Transform/Partition]
+    C3[Write to Iceberg Table - via Spark or AWS Glue]
+  end
+
+  subgraph Iceberg Storage
+    D1[S3 - Iceberg Table Storage]
+    D2[AWS Glue Catalog / Hive Metastore - Metadata]
+  end
+
+  A1 --> B1 --> B2 --> B3 --> B4
+  A2 --> C1 --> C2 --> C3
+
+  B4 --> D1
+  C3 --> D1
+
+  D1 --> D2
+
+    classDef aws fill:#232F3E,stroke:#FF9900,color:#FF9900,stroke-width:2px;
+    class IoT,Stream,Lambda,Firehose,S3,Redshift,Athena,QuickSight,CloudWatch aws;`,
+    annotations: `## Data Pipeline Architecture
+
+This architecture demonstrates a complete data processing pipeline for IoT sensor data:
+
+- **IoT Core**: Manages device connectivity and data ingestion
+- **Kinesis**: Real-time data streaming and buffering
+- **Lambda**: Serverless data transformation and enrichment
+- **Firehose**: Managed data delivery to storage
+- **S3**: Object storage for data lake
+- **Redshift**: Data warehouse for structured analytics
+- **Athena**: SQL queries on S3 data
+- **QuickSight**: Business intelligence and visualization
+- **CloudWatch**: Monitoring and alerting
+
+### Key Features
+- Real-time data ingestion
+- Serverless data processing
+- Automated data delivery
+- Multiple analytics options
+- End-to-end monitoring
+
+### Use Cases
+- Industrial IoT monitoring
+- Sensor data analytics
+- Time-series analysis
+- Business intelligence`
   }
 ]; 
