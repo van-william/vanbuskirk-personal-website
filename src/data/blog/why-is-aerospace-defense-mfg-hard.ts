@@ -66,6 +66,17 @@ Advanced analytics can support this nuanced dynamic, but this relies on better u
 - Quality tracking to understand allocation of the quality team cost as well as scrap and rework allocations
 - and more
 
+Too often, when costs get too high, everyone immediately assumes labor cost is the issue. There's so much more
+nuance that this and other potential root causes to address. Have a myopic view of manufacturing costs
+will give suboptimal solutions and also give way to thinking labor is always the problem and not a capability
+for an improved manufacturing system.
+
+Below is a quick illustrative cost breakdown. Understanding insource vs. outsource decisions can get complicated
+quickly. It's vital to understand the whole manufacturing cost and all the allocated costs. Otherwise, there's
+a skewed view of profitability
+
+![wrap-rates](../blog_images/why-is-aerospace-defense-mfg-hard/wrap_rates.png)
+
 ## 3. Multi-Tiered Supply Chain Complexity: From Raw Materials to Final Assembly
 
 The aerospace and defense supply chain is incredibly nuanced. There's a number of tiers including raw material suppliers,
@@ -81,6 +92,11 @@ its raw materials, creating a massive data management challenge. Digital supply 
 revolutionizing this process by creating end-to-end visibility and automating traceability documentation.
 These systems enable manufacturers to track materials in real-time, ensuring compliance and quality at every step.
 
+See below for a clear example of this complexity. The Curiosity Rover relied upon a multi-tier supply chain
+to manufacture and assembly a complex assembly. Understanding seemingly basic issues around material availability,
+quality, delivery details, and more is critical to the success of the mission.
+![Mars Rover](../blog_images/why-is-aerospace-defense-mfg-hard/mars_rover.png)
+
 ## 4. Quality and Compliance: The Foundation of Trust
 
 Quality in aerospace and defense manufacturing isn't just about meeting specifications - it's about ensuring safety and
@@ -94,6 +110,11 @@ Enabling systems to complement and augment this tribal knowledge is critical for
 Modern quality systems need to span across operators, supervisors, quality engineers, design engineers, and more to enable
 a true total house of quality.
 
+Here's a big example: Boeing's Global Supply Chain
+![Boeing Global Supply Chain](http://787updates.newairplane.com/Boeing787Updates/media/Boeing787Updates/787%20Suppliers/supply-chain-medium.jpg?width=626&height=470&ext=.jpg)
+[Source](http://787updates.newairplane.com/787-Suppliers/World-Class-Supplier-Quality#:~:text=The%20787%20Dreamliner%20has%20about,supplier%20partners%20around%20the%20world.)
+The amount of complexity to not only build the 787 but also to manage compliance of quality of all these suppliers and in-house manufacturing creates quite the task.
+
 ## 5. Bridging the Knowledge Gap: From Shop Floor to Design Office
 
 One of the most valuable but often underutilized resources in aerospace and defense manufacturing is the knowledge of
@@ -106,6 +127,20 @@ being lost in daily operations, they can document it through a digital platform,
 and measurements. This feedback flows directly to engineering teams, who can use it to improve future
 designs. This continuous feedback loop is accelerating true Design for Manufacturing (DFM) and Design for Assembly (DFA) practices.
 
+Why does this matter so much? There's a much bigger value creation opportunity when you address issues earlier in the value chain.
+* Manufacturing:There's a theoretical limit to how productive an assembly line can be. OEE can only go so high.
+* (Before Manufacturing) Supply Chain: There's a potentially bigger value proposition in understanding
+bigger questions around where to make parts, what to make vs. buy from suppliers, which suppliers to buy from
+* (Before Supply Chain) Engineering: There's an even bigger value proposition with first examining how to design
+parts and assemblies in a more cost effective way to reduce waste at the design level. Design for Manufacturability
+studies (DFM) and Design for Assembly (DFA) studies are often overlooked because it requires close collaboration across
+Engineering, Supply Chain, and Manufacturing, but there's a deeper value proposition waiting.
+
+As a summary framework, PwC's ISSR (Inherent, Structural, Systemic, Structural, and Realized) framework.
+
+![ISSR Framework](../blog_images/why-is-aerospace-defense-mfg-hard/issr.png)
+[Source](https://www.strategyand.pwc.com/us/en/reports/2007-2014/design-for-affordability.pdf)
+with understanding 
 ## Conclusion
 
 The key is finding the right balance between technological solutions and human expertise. Digital tools
