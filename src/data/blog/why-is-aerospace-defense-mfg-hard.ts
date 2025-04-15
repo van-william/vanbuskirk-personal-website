@@ -73,7 +73,7 @@ for an improved manufacturing system.
 
 Below is a quick illustrative cost breakdown. Understanding insource vs. outsource decisions can get complicated
 quickly. It's vital to understand the whole manufacturing cost and all the allocated costs. Otherwise, there's
-a skewed view of profitability
+a skewed view of profitability and a potential for lost opportunities.
 
 ![wrap-rates](../blog_images/why-is-aerospace-defense-mfg-hard/wrap_rates.png)
 
@@ -95,6 +95,7 @@ These systems enable manufacturers to track materials in real-time, ensuring com
 See below for a clear example of this complexity. The Curiosity Rover relied upon a multi-tier supply chain
 to manufacture and assembly a complex assembly. Understanding seemingly basic issues around material availability,
 quality, delivery details, and more is critical to the success of the mission.
+
 ![Mars Rover](../blog_images/why-is-aerospace-defense-mfg-hard/mars_rover.png)
 
 ## 4. Quality and Compliance: The Foundation of Trust
@@ -111,8 +112,10 @@ Modern quality systems need to span across operators, supervisors, quality engin
 a true total house of quality.
 
 Here's a big example: Boeing's Global Supply Chain
-![Boeing Global Supply Chain](http://787updates.newairplane.com/Boeing787Updates/media/Boeing787Updates/787%20Suppliers/supply-chain-medium.jpg?width=626&height=470&ext=.jpg)
+![Boeing Global Supply Chain](../blog_images/why-is-aerospace-defense-mfg-hard/boeing.png)
+
 [Source](http://787updates.newairplane.com/787-Suppliers/World-Class-Supplier-Quality#:~:text=The%20787%20Dreamliner%20has%20about,supplier%20partners%20around%20the%20world.)
+
 The amount of complexity to not only build the 787 but also to manage compliance of quality of all these suppliers and in-house manufacturing creates quite the task.
 
 ## 5. Bridging the Knowledge Gap: From Shop Floor to Design Office
@@ -140,7 +143,7 @@ As a summary framework, PwC's ISSR (Inherent, Structural, Systemic, Structural, 
 
 ![ISSR Framework](../blog_images/why-is-aerospace-defense-mfg-hard/issr.png)
 [Source](https://www.strategyand.pwc.com/us/en/reports/2007-2014/design-for-affordability.pdf)
-with understanding 
+
 ## Conclusion
 
 The key is finding the right balance between technological solutions and human expertise. Digital tools
