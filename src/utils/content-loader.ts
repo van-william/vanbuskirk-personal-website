@@ -1,6 +1,6 @@
 import { BlogPost } from "@/types/blog";
 import { Photo } from "@/data/photos";
-import { ArchitectureDiagram } from "@/types/architecture";
+import { Architecture, ArchitectureDiagram } from "@/types/architecture";
 
 // Dynamically import all blog posts
 export async function loadBlogPosts(): Promise<BlogPost[]> {
@@ -36,14 +36,48 @@ export async function loadBlogPost(slug: string): Promise<BlogPost | null> {
 
 // Load all architecture diagrams
 export const loadArchitectureDiagrams = async (): Promise<ArchitectureDiagram[]> => {
-  const { architectureDiagrams } = await import("@/data/architectures");
-  return architectureDiagrams;
+  try {
+    const modules = import.meta.glob("@/data/architectures/*.ts");
+
+    const diagrams = await Promise.all(
+      Object.entries(modules).map(async ([path, resolver]) => {
+        const slug = path.split("/").pop()?.replace(".ts", ""); // Extract slug from filename
+        const mod = await resolver() as { architecture: Architecture };
+        return {
+          title: mod.architecture.metadata.title,
+          description: mod.architecture.metadata.description,
+          slug,
+          tags: mod.architecture.metadata.tags,
+          mermaid: mod.architecture.mermaid,
+          annotations: mod.architecture.markdown
+        };
+      })
+    );
+
+    return diagrams;
+  } catch (error) {
+    console.error('Error loading architecture diagrams:', error);
+    return [];
+  }
 };
 
 // Load a single architecture diagram by slug
 export const loadArchitectureDiagram = async (slug: string): Promise<ArchitectureDiagram | null> => {
-  const diagrams = await loadArchitectureDiagrams();
-  return diagrams.find(diagram => diagram.slug === slug) || null;
+  try {
+    const module = await import(`@/data/architectures/${slug}.ts`) as { architecture: Architecture };
+    const arch = module.architecture;
+    return {
+      title: arch.metadata.title,
+      description: arch.metadata.description,
+      slug,
+      tags: arch.metadata.tags,
+      mermaid: arch.mermaid,
+      annotations: arch.markdown
+    };
+  } catch (error) {
+    console.error(`Error loading architecture diagram ${slug}:`, error);
+    return null;
+  }
 };
 
 // Load all photos
