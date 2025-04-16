@@ -64,11 +64,12 @@ Consider a scenario where a shop is bidding on a new contract. Without accurate 
 underbid, leading to financial strain, or overbid, losing the contract to competitors. Even worse,
 consider a defense cost-plus contract: accurately reporting manufacturing costs becomes a compliance
 issue. Advanced analytics can support this nuanced dynamic, but this relies on better underlying data collection.
+
+Here's a few examples below:
 - Material tracking (e.g., RFID) to improve understanding of material movement and usage cost
 - Labor tracking apps to understand true cycle times
 - Equipment monitoring to better allocate depreciation and electrical costs
 - Quality tracking to understand allocation of the quality team cost as well as scrap and rework allocations
-- and more
 
 Too often, when costs get too high, everyone immediately assumes labor cost is the issue.
 There's so much more nuance than this and other potential root causes to address. Having a
@@ -160,4 +161,3 @@ The journey won't be easy, but the rewards are significant: improved operational
 and compliance, reduced costs, accelerated innovation, and, most importantly, an empowered workforce.
 `,
 };
-
