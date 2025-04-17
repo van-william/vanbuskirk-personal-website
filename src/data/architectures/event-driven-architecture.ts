@@ -13,18 +13,6 @@ export const architecture = {
     url: "/architecture/chinese-garden.jpg",
     alt: "Event-driven architecture diagram showing Lambda producers, EventBridge, consumers, and DynamoDB"
   },
-  mermaid: `architecture-beta
-group api(logos:aws-lambda)[API Layer]
-service producer(logos:aws-lambda)[Producer] in api
-service bus(logos:aws-eventbridge)[EventBridge] in api
-service consumer(logos:aws-lambda)[Consumer] in api
-
-group data(logos:aws-dynamodb)[Storage]
-service db(logos:aws-dynamodb)[DynamoDB] in data
-
-producer:R -- L:bus
-bus:R -- L:consumer
-consumer:R -- L:db`,
   markdown: `## AWS Event-Driven System
 
 This architecture demonstrates an event-driven system using AWS services:

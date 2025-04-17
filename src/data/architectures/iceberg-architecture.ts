@@ -13,26 +13,6 @@ export const architecture = {
     url: "/architecture/chinese-garden.jpg",
     alt: "Iceberg data pipeline architecture showing data sources, processing layers, and storage components"
   },
-  mermaid: `architecture-beta
-group sources[Data Sources]
-service stream[Streaming] in sources
-service batch[Batch] in sources
-
-group processing[Processing]
-service kinesis[Kinesis] in processing
-service lambda[Lambda] in processing
-service flink[Flink] in processing
-
-group storage[Storage]
-service s3[S3] in storage
-service catalog[Catalog] in storage
-
-stream:R -- L:kinesis
-batch:R -- L:lambda
-kinesis:R -- L:flink
-lambda:R -- L:flink
-flink:R -- L:s3
-s3:R -- L:catalog`,
   markdown: `## Iceberg Data Pipeline Architecture
 
 This architecture demonstrates a modern data lake architecture using Apache Iceberg:
