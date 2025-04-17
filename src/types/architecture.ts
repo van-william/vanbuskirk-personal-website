@@ -8,17 +8,25 @@ export interface ArchitectureMetadata {
   relatedArchitectures?: string[];
 }
 
-export interface Architecture {
-  metadata: ArchitectureMetadata;
-  mermaid: string;
-  markdown: string;
-}
-
 export interface ArchitectureDiagram {
   title: string;
   description: string;
-  slug: string;  // This comes from the filename
+  slug: string;
   tags: string[];
-  mermaid: string;
-  annotations?: string;
+  diagram: {
+    type: "image";
+    url: string;
+    alt: string;
+  };
+  markdown: string;
+}
+
+export interface Architecture {
+  metadata: ArchitectureMetadata;
+  diagram: {
+    type: "image";
+    url: string;
+    alt: string;
+  };
+  markdown: string;
 } 

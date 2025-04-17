@@ -48,8 +48,8 @@ export const loadArchitectureDiagrams = async (): Promise<ArchitectureDiagram[]>
           description: mod.architecture.metadata.description,
           slug,
           tags: mod.architecture.metadata.tags,
-          mermaid: mod.architecture.mermaid,
-          annotations: mod.architecture.markdown
+          diagram: mod.architecture.diagram,
+          markdown: mod.architecture.markdown
         };
       })
     );
@@ -71,8 +71,8 @@ export const loadArchitectureDiagram = async (slug: string): Promise<Architectur
       description: arch.metadata.description,
       slug,
       tags: arch.metadata.tags,
-      mermaid: arch.mermaid,
-      annotations: arch.markdown
+      diagram: arch.diagram,
+      markdown: arch.markdown
     };
   } catch (error) {
     console.error(`Error loading architecture diagram ${slug}:`, error);

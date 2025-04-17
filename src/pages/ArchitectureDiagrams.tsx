@@ -6,7 +6,6 @@ import { ArchitectureDiagram } from "@/types/architecture";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 import ReactMarkdown from "react-markdown";
-import { MermaidDiagram } from "@/components/ui/mermaid-diagram";
 
 const ArchitectureDiagrams = () => {
   const [diagrams, setDiagrams] = useState<ArchitectureDiagram[]>([]);
@@ -106,20 +105,19 @@ const ArchitectureDiagrams = () => {
                   </div>
                 </div>
 
-                {/* Mermaid Diagram */}
+                {/* Architecture Diagram Image */}
                 <div className="bg-card rounded-lg p-6 border">
-                  <MermaidDiagram 
-                    diagram={selectedDiagram.mermaid}
-                    className="flex justify-center items-center"
+                  <img 
+                    src={selectedDiagram.diagram.url} 
+                    alt={selectedDiagram.diagram.alt}
+                    className="max-w-full h-auto rounded-md"
                   />
                 </div>
 
-                {/* Annotations */}
-                {selectedDiagram.annotations && (
-                  <div className="prose dark:prose-invert max-w-none">
-                    <ReactMarkdown>{selectedDiagram.annotations}</ReactMarkdown>
-                  </div>
-                )}
+                {/* Description */}
+                <div className="prose dark:prose-invert max-w-none">
+                  <ReactMarkdown>{selectedDiagram.markdown}</ReactMarkdown>
+                </div>
               </div>
             ) : (
               <div className="text-center py-12">

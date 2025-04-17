@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
-import { MermaidDiagram } from "@/components/ui/mermaid-diagram";
+import ReactMarkdown from "react-markdown";
 
 const ArchitectureDiagramDetail = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -103,23 +103,19 @@ const ArchitectureDiagramDetail = () => {
       <div className="py-6 lg:py-10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            {/* Mermaid diagram container */}
+            {/* Architecture Diagram Image */}
             <div className="rounded-lg shadow-sm border mb-8 overflow-auto bg-white dark:bg-slate-900">
-              <MermaidDiagram 
-                diagram={diagram.mermaid}
-                className="p-6"
+              <img 
+                src={diagram.diagram.url} 
+                alt={diagram.diagram.alt}
+                className="max-w-full h-auto p-6"
               />
             </div>
             
-            {/* Raw diagram code (collapsible) */}
-            <details className="mt-8 p-4 border rounded-md">
-              <summary className="font-medium cursor-pointer">
-                View Diagram Code
-              </summary>
-              <pre className="mt-4 p-4 bg-muted rounded-md overflow-auto text-sm">
-                <code>{diagram.mermaid}</code>
-              </pre>
-            </details>
+            {/* Description */}
+            <div className="prose dark:prose-invert max-w-none">
+              <ReactMarkdown>{diagram.markdown}</ReactMarkdown>
+            </div>
           </div>
         </div>
       </div>
