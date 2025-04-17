@@ -9,6 +9,11 @@ export const architecture = {
     complexity: "advanced",
     relatedArchitectures: ["iceberg-architecture"]
   },
+  diagram: {
+    type: "image",
+    url: "/architecture/chinese-garden.jpg",
+    alt: "Data pipeline architecture showing IoT Core, Kinesis, Lambda, and analytics components"
+  },
   mermaid: `graph LR
     subgraph Ingestion
       IoT["fa:fa-microchip IoT Core"]

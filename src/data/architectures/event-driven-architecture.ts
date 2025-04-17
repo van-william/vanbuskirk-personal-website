@@ -8,6 +8,11 @@ export const architecture = {
     complexity: "intermediate",
     relatedArchitectures: ["cloud-api-architecture"]
   },
+  diagram: {
+    type: "image",
+    url: "/architecture/chinese-garden.jpg",
+    alt: "Event-driven architecture diagram showing Lambda producers, EventBridge, consumers, and DynamoDB"
+  },
   mermaid: `architecture-beta
 group api(logos:aws-lambda)[API Layer]
 service producer(logos:aws-lambda)[Producer] in api

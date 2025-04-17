@@ -10,7 +10,7 @@ export const architecture = {
   },
   diagram: {
     type: "image",
-    url: "/architecture/cloud-api-arch.png",
+    url: "/architecture/chinese-garden.jpg",
     alt: "Cloud API architecture diagram showing load balancer, API gateway, Lambda functions, and database components"
   },
   markdown: `## AWS Architecture Overview

@@ -8,6 +8,11 @@ export const architecture = {
     complexity: "advanced",
     relatedArchitectures: ["data-pipeline-architecture"]
   },
+  diagram: {
+    type: "image",
+    url: "/architecture/chinese-garden.jpg",
+    alt: "Iceberg data pipeline architecture showing data sources, processing layers, and storage components"
+  },
   mermaid: `architecture-beta
 group sources[Data Sources]
 service stream[Streaming] in sources
