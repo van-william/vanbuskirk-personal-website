@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
 import animate from "tailwindcss-animate";
+import typography from "@tailwindcss/typography";
 
 export default {
 	darkMode: ["class"],
@@ -52,6 +53,42 @@ export default {
 				card: {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
+				},
+			},
+			typography: {
+				DEFAULT: {
+					css: {
+						maxWidth: 'none',
+						color: 'hsl(var(--foreground))',
+						hr: {
+							borderColor: 'hsl(var(--border))',
+							marginTop: '3em',
+							marginBottom: '3em'
+						},
+						'h1, h2, h3, h4': {
+							color: 'hsl(var(--foreground))',
+							'scroll-margin-top': '100px',
+						},
+						a: {
+							color: 'hsl(var(--primary))',
+							'text-decoration': 'none',
+							'&:hover': {
+								color: 'hsl(var(--primary))',
+								'text-decoration': 'underline',
+							},
+						},
+						pre: {
+							backgroundColor: 'hsl(var(--muted))',
+							color: 'hsl(var(--foreground))',
+						},
+						code: {
+							color: 'hsl(var(--foreground))',
+							backgroundColor: 'hsl(var(--muted))',
+							padding: '0.25rem',
+							borderRadius: '0.25rem',
+							fontSize: '0.875em',
+						},
+					},
 				},
 			},
 			borderRadius: {
@@ -112,5 +149,5 @@ export default {
 			}
 		}
 	},
-	plugins: [animate],
+	plugins: [animate, typography],
 } satisfies Config;

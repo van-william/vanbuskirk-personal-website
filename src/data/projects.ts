@@ -1,15 +1,4 @@
 import { Project } from "@/types/project";
-
-export interface Project {
-    id: string;
-    title: string;
-    description: string;
-    imageUrl: string;
-    tags: string[];
-    articleLink?: string;
-    githubLink?: string;
-    link?: string;
-  }
   
   export const projects: Project[] = [
     {
@@ -80,6 +69,23 @@ export interface Project {
       githubLink: "https://github.com/van-william/beatwave-emulator",
       articleLink: "https://808-emulator.netlify.app/"
     },
+    {
+    id: "8",
+    title: "Single Page Application - Book Summary",
+    description: "Summarized The Technological Republic by Alex Karp on a web app",
+    imageUrl: "../project_images/tech_republic.png",
+    tags: ["React", "Typescript"],
+    articleLink: "https://www.linkedin.com/posts/wvanbuskirk_hacked-around-and-finished-my-tech-republic-activity-7344065933310644227-xiHB",
+    githubLink: "https://tech-republic.netlify.app/",
+  },
+    {
+    id: "9",
+    title: "VLM Experimentation",
+    description: "Open and closed source VLM model usage with Streamlit",
+    imageUrl: "../project_images/vlm_streamlit.png",
+    tags: ["Python", "VLM"],
+    githubLink: "https://github.com/van-william/VLM-Experiments",
+  },
     // {
     //   id: "architecture-diagrams",
     //   title: "Architecture Diagrams",
