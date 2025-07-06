@@ -66,8 +66,8 @@ import { Project } from "@/types/project";
       description: "Built a replica of the Roland TR-808 drum machine with Lovable, Cursor, and Netlify",
       imageUrl: "../project_images/rhythm_composer.png",
       tags: ["Typescript", "LLM", "React"],
+      link: "https://808-emulator.netlify.app/",
       githubLink: "https://github.com/van-william/beatwave-emulator",
-      articleLink: "https://808-emulator.netlify.app/"
     },
     {
     id: "8",
@@ -75,8 +75,9 @@ import { Project } from "@/types/project";
     description: "Summarized The Technological Republic by Alex Karp on a web app",
     imageUrl: "../project_images/tech_republic.png",
     tags: ["React", "Typescript"],
+    link: "https://tech-republic.netlify.app/",
+    githubLink: "https://github.com/van-william/karp-republic-explorer",
     articleLink: "https://www.linkedin.com/posts/wvanbuskirk_hacked-around-and-finished-my-tech-republic-activity-7344065933310644227-xiHB",
-    githubLink: "https://tech-republic.netlify.app/",
   },
     {
     id: "9",
@@ -85,6 +86,24 @@ import { Project } from "@/types/project";
     imageUrl: "../project_images/vlm_streamlit.png",
     tags: ["Python", "VLM"],
     githubLink: "https://github.com/van-william/VLM-Experiments",
+  },
+  {
+    id: "10",
+    title: "RAG Pipeline for Q&A",
+    description: "Built a RAG pipeline for Q&A with a Technological Republic book",
+    imageUrl: "https://images.unsplash.com/photo-1714901423336-1884cd3fb50f",
+    tags: ["Postgres", "LLM"],
+    link: "https://tech-republic.netlify.app/",
+    githubLink: "https://github.com/van-william/karp-republic-explorer",
+  },
+  {
+    id: "11",
+    title: "Search Fund Web App",
+    description: "Built a simple web app to highlight Search Fund plans via a React Web App",
+    imageUrl: "https://images.unsplash.com/photo-1673356993319-4ed0dea9e9b6",
+    tags: ["React"],
+    link: "https://basecamp-capital.netlify.app/",
+    githubLink: "https://github.com/van-william/basecamp-legacy-launchpad",
   },
     // {
     //   id: "architecture-diagrams",
