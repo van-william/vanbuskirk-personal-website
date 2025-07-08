@@ -95,6 +95,7 @@ import { Project } from "@/types/project";
     tags: ["Postgres", "LLM"],
     link: "https://tech-republic.netlify.app/",
     githubLink: "https://github.com/van-william/karp-republic-explorer",
+    articleLink: "https://www.linkedin.com/posts/wvanbuskirk_slightly-disappointed-i-havent-seen-llm-activity-7348419253005373441-o9Js",
   },
   {
     id: "11",

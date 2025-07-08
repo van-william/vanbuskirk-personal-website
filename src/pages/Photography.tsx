@@ -41,7 +41,7 @@ const Photography = () => {
     <>
       <PageHeader
         title="Photography"
-        description="A collection of moments and perspectives captured through my lens."
+        description="moments from travels and adventures"
       />
       
       <section className="py-12">

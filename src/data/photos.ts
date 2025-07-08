@@ -161,6 +161,15 @@ export const photos: Photo[] = [
     category: "Landscape",
     width: 1920,
     height: 1280,
+  },
+  {
+    id: "18",
+    title: "Half Dome through the Trees",
+    description: "Hiking through the trees in Yosemite",
+    imageUrl: "https://images.unsplash.com/photo-1569764434437-6d2385f6aa78",
+    category: "Landscape",
+    width: 1920,
+    height: 1280,
   }
 ];
 
