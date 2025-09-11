@@ -18,6 +18,7 @@ import ArchitectureDiagramsPage from "./pages/ArchitectureDiagrams";
 import ArchitectureDiagramDetailPage from "./pages/ArchitectureDiagramDetail";
 import NotFound from "./pages/NotFound";
 import ExternalRedirect from "./components/ExternalRedirect";
+import OpenAIPage from "./pages/OpenAI";
 
 const queryClient = new QueryClient();
 
@@ -41,6 +42,7 @@ const App = () => (
               <Route path="/architecture-diagrams" element={<ArchitectureDiagramsPage />} />
               <Route path="/architecture-diagrams/:slug" element={<ArchitectureDiagramDetailPage />} />
               <Route path="/io" element={<ExternalRedirect to="https://www.loom.com/share/8388f468a1d24ad691a5bf8108213dcc?sid=16f74a89-5e83-47f7-975f-fbd49d2915cb" />} />
+              <Route path="/openai" element={<OpenAIPage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Layout>
