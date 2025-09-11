@@ -26,8 +26,6 @@ const OpenAI = () => {
                 <iframe 
                   src="https://www.loom.com/embed/54d8e536ea1d4337b361dd00235c1107?sid=7140c414-6b40-46b2-b001-60ae8f3a2a5c" 
                   frameBorder="0" 
-                  webkitAllowFullScreen 
-                  mozAllowFullScreen 
                   allowFullScreen 
                   className="absolute top-0 left-0 w-full h-full rounded-lg"
                   title="OpenAI Integration Demo"
