@@ -17,7 +17,7 @@ const OpenAI = () => {
             <CardContent className="p-6">
               <div className="mb-6">
                 <p className="text-muted-foreground mb-4">
-                  A walkthrough of my career journey and experiences that led to pursuing opportunities at OpenAI.
+                  A walkthrough of my career journey and experiences
                 </p>
               </div>
               
