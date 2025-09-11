@@ -7,8 +7,8 @@ const OpenAI = () => {
   return (
     <>
       <PageHeader
-        title="OpenAI Integration"
-        description="Exploring AI-powered solutions and their practical applications"
+        title="Portfolio Tour "
+        description="AI + Hardware experiences"
       />
 
       <Section>
@@ -16,9 +16,8 @@ const OpenAI = () => {
           <Card>
             <CardContent className="p-6">
               <div className="mb-6">
-                <h2 className="text-2xl font-bold mb-4">AI in Practice</h2>
                 <p className="text-muted-foreground mb-4">
-                  Watch this demonstration of AI integration and its real-world applications.
+                  A walkthrough of my career journey and experiences that led to pursuing opportunities at OpenAI.
                 </p>
               </div>
               
