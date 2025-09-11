@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { ThemeProvider } from "@/hooks/use-theme";
 import { Layout } from "@/components/layout/Layout";
 
@@ -39,6 +39,7 @@ const App = () => (
               <Route path="/content-guide" element={<ContentGuidePage />} />
               <Route path="/architecture-diagrams" element={<ArchitectureDiagramsPage />} />
               <Route path="/architecture-diagrams/:slug" element={<ArchitectureDiagramDetailPage />} />
+              <Route path="/io" element={<Navigate to="https://www.loom.com/share/8388f468a1d24ad691a5bf8108213dcc?sid=16f74a89-5e83-47f7-975f-fbd49d2915cb" replace />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Layout>
