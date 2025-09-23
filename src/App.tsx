@@ -20,6 +20,7 @@ import NotFound from "./pages/NotFound";
 import ExternalRedirect from "./components/ExternalRedirect";
 import OpenAIPage from "./pages/OpenAI";
 import IOPage from "./pages/IO";
+import LetsTalkPage from "./pages/LetsTalk";
 
 const queryClient = new QueryClient();
 
@@ -43,6 +44,7 @@ const App = () => (
               <Route path="/architecture-diagrams" element={<ArchitectureDiagramsPage />} />
               <Route path="/architecture-diagrams/:slug" element={<ArchitectureDiagramDetailPage />} />
               <Route path="/io" element={<IOPage />} />
+              <Route path="/lets-talk" element={<LetsTalkPage />} />
               <Route path="/openai" element={<OpenAIPage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
