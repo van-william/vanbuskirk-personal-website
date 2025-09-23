@@ -10,21 +10,21 @@ const conversationTracks = [
     label: "Let's Talk",
     videoUrl: "https://www.loom.com/embed/5d49b7358829445a8a71043316b6668e",
     introMarkdown: `### Welcome to Let's Talk: Augmented Therapy\n\nLet's Talk is a platform for patients and therapists to improve upon cognitive behavior therapy (CBT) sessions through AI-powered tools.`,
-    summaryMarkdown: `# Learn More About Let's Talk\n\nGet started at lets-talk.site`,
+    summaryMarkdown: `# Learn More About Let's Talk\n\nGet started at [lets-talk.site](https://lets-talk.site)`,
   },
   {
     id: "patient",
     label: "User Demo",
     videoUrl: "https://www.loom.com/embed/d9f9cbc489804a54adea6d045355072d",
     introMarkdown: `### User Overview\n\nLet's Talk streamlines CBT journaling with easy tracking and helpful prompts`,
-    summaryMarkdown: `# Learn More About Let's Talk\n\nGet started at lets-talk.site`,
+    summaryMarkdown: `# Learn More About Let's Talk\n\nGet started at [lets-talk.site](https://lets-talk.site)`,
   },
   {
     id: "therapist",
     label: "Therapist Demo",
     videoUrl: "https://www.loom.com/embed/16359e01652f475793f3be17f659c9a6",
     introMarkdown: `### Therapist Overview\n\nTherapists have a portal to easily track patient progress, alerts, and more.`,
-    summaryMarkdown: `# Learn More About Let's Talk\n\nGet started at lets-talk.site`,
+    summaryMarkdown: `# Learn More About Let's Talk\n\nGet started at [lets-talk.site](https://lets-talk.site)`,
   },
 ];
 
