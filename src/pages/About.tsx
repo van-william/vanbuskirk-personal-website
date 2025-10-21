@@ -69,40 +69,54 @@ const About = () => {
       </Section>
 
       <Section className="bg-secondary/30">
-        <h2 className="text-2xl md:text-3xl font-bold mb-12 text-center">Key Skills</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <h2 className="text-2xl md:text-3xl font-bold mb-12 text-center">Skills & Expertise</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           <div className="p-6 bg-background rounded-lg border shadow-sm">
-            <h3 className="text-lg font-semibold mb-4">Factory Analytics & Quality</h3>
+            <h3 className="text-lg font-semibold mb-4">Build (OT)</h3>
             <ul className="space-y-2 text-muted-foreground">
-              <li>OEE Analytics</li>
-              <li>Manufacturing Traceability</li>
               <li>Machine Monitoring</li>
-              <li>IT / OT Architecture</li>
-              <li>Quality Root Cause Analysis</li>
-              <li>SPC (Cp/Cpk)</li>
+              <li>MQTT</li>
+              <li>OPC-UA</li>
+              <li>Node-RED</li>
+              <li>PLC / SCADA</li>
+              <li>Tulip Interfaces (MES)</li>
+              <li>Manufacturing Root Cause Analysis</li>
             </ul>
           </div>
 
           <div className="p-6 bg-background rounded-lg border shadow-sm">
-            <h3 className="text-lg font-semibold mb-4">Data Science & ML</h3>
+            <h3 className="text-lg font-semibold mb-4">Build (IT)</h3>
             <ul className="space-y-2 text-muted-foreground">
-              <li>Python, SQL</li>
-              <li>scikit-learn, Keras</li>
-              <li>Exploratory Data Analysis</li>
-              <li>AI/LLM Workflows</li>
+              <li>Python</li>
+              <li>SQL</li>
+              <li>Databricks</li>
+              <li>Kedro</li>
+              <li>ELT / ETL</li>
+              <li>Data Validation / Quality</li>
               <li>Retrieval / Embeddings</li>
-              <li>Frontline Operations Use Cases</li>
+              <li>AI/LLM Workflows</li>
             </ul>
           </div>
 
           <div className="p-6 bg-background rounded-lg border shadow-sm">
-            <h3 className="text-lg font-semibold mb-4">Pipelines & Factory Systems</h3>
+            <h3 className="text-lg font-semibold mb-4">Strategize</h3>
             <ul className="space-y-2 text-muted-foreground">
-              <li>Databricks, Kedro</li>
-              <li>ELT / ETL, Data Validation</li>
-              <li>MQTT, OPC-UA</li>
-              <li>Node-RED, PLC / SCADA</li>
-              <li>Tulip Integration</li>
+              <li>Operations Strategy</li>
+              <li>Make vs. Buy Strategy</li>
+              <li>Sourcing Strategy</li>
+              <li>Private Equity Value Creation</li>
+              <li>Private Equity Operational Due Diligence</li>
+            </ul>
+          </div>
+
+          <div className="p-6 bg-background rounded-lg border shadow-sm">
+            <h3 className="text-lg font-semibold mb-4">Lead</h3>
+            <ul className="space-y-2 text-muted-foreground">
+              <li>Cloud Partnership Engagement</li>
+              <li>ISV Co-Sell Strategy</li>
+              <li>Sales Enablement</li>
+              <li>Ecosystem Partnerships</li>
+              <li>Technology Partnerships</li>
             </ul>
           </div>
         </div>
@@ -111,101 +125,54 @@ const About = () => {
       <Section>
         <h2 className="text-2xl md:text-3xl font-bold mb-12 text-center">Experience</h2>
         <div className="space-y-12 max-w-4xl mx-auto">
-          {/* Tulip Alliances & Partnerships */}
+          {/* Tulip — Alliances Lead */}
           <div className="relative pl-10 border-l-2 pb-12">
             <div className="absolute -left-2 top-0 w-5 h-5 rounded-full bg-primary"></div>
             <div>
-              <h3 className="text-xl font-bold">Alliances & Partnerships Manager</h3>
+              <h3 className="text-xl font-bold">Tulip Interfaces — Alliances Lead (2024–Present)</h3>
               <ul className="text-muted-foreground space-y-2 list-disc pl-5">
-              <li>
-                  Scaled alliance pipeline to increase alliance-led deals from AWS, Microsoft, and more
-                  by selling a packaged solution including Tulip, cloud hyperscaler architecture, and more.
-                </li>
-                <li>
-                  Scaled Tulip’s partner ecosystem from 0 → 20 partners, driving 40+ joint
-                  integrations and standardized onboarding frameworks.
-                </li>
-                <li>
-                  Built alignment between product, marketing, and alliances teams to
-                  position Tulip apps within AWS, Microsoft, and system-integrator
-                  ecosystems.
-                </li>
-                <li>
-                  Defined playbooks for PoC development, GTM alignment, and
-                  co-marketing with hardware and software partners.
-                </li>
+                <li>Scaled AWS co-sell motion to $2M+ ARR; concurrently managed Azure, PwC, Deloitte alliances.</li>
+                <li>Authored integration guides/playbooks to enable partner-led selling at scale.</li>
+                <li>Managed $MM+ partner-generated pipeline across alliances and channel partners.</li>
               </ul>
             </div>
           </div>
 
-          {/* Tulip Product Manager */}
+          {/* Tulip — Marketplace Lead (Library) */}
           <div className="relative pl-10 border-l-2 pb-12">
             <div className="absolute -left-2 top-0 w-5 h-5 rounded-full bg-primary"></div>
             <div>
-              <h3 className="text-xl font-bold">Product Manager — Library, Marketplace</h3>
+              <h3 className="text-xl font-bold">Tulip Interfaces — Marketplace Lead (Library) (2023–2024)</h3>
               <ul className="text-muted-foreground space-y-2 list-disc pl-5">
-                <li>
-                  Refined Tulip's app library with factory-ready apps for customers to accelerate adoption.
-                </li>
-                <li>
-                  Built pipelines from shop-floor apps to Databricks, Snowflake, and
-                  Microsoft Fabric for real-time production insights.
-                </li>
-                <li>
-                  Standardized test/factory integration patterns using MQTT and
-                  OPC-UA; improved data lineage and traceability across deployments.
-                </li>
+                <li>Grew partner ecosystem 0 → 20; standardized onboarding; drove 40+ partner integrations.</li>
+                <li>Built 30+ factory-ready Tulip Library apps to accelerate adoption and usage.</li>
+                <li>Shipped v0 shop-floor data pipelines (Databricks, Snowflake) to speed time-to-value.</li>
+                <li>Delivered "Composable MES" templates now used by 100+ customers globally.</li>
               </ul>
             </div>
           </div>
 
-          
-          {/* PwC */}
+          {/* PwC — Senior Manager */}
           <div className="relative pl-10 border-l-2 pb-12">
             <div className="absolute -left-2 top-0 w-5 h-5 rounded-full bg-primary"></div>
             <div>
-              <h3 className="text-xl font-bold">
-                Senior Manager — Digital Operations (Product Development & Manufacturing)
-              </h3>
-
+              <h3 className="text-xl font-bold">PwC, Digital Operations (PDM) — Senior Manager (2022–2023)</h3>
               <ul className="text-muted-foreground space-y-2 list-disc pl-5">
-                <li>
-                  <strong>EV OEM:</strong> Led 12-person team on material-flow
-                  transformation; improved inventory accuracy 52% → 89% via
-                  PLC → Snowflake → Tableau SPC workflows.
-                </li>
-                <li>
-                  <strong>Defense Prime:</strong> Designed Smart Factory PoC with $17M
-                  cost-reduction impact; built streaming CNC/PLC pipelines enabling
-                  same-day root-cause analysis.
-                </li>
+                <li><strong>EV OEM:</strong> Led 12-person team on material flow transformation; improved inventory accuracy 52% → 89% via PLC → Snowflake → Tableau SPC workflows.</li>
+                <li><strong>Defense Prime:</strong> Designed & implemented Smart Factory PoC; delivered $17M cost-reduction business case. Built streaming CNC/PLC pipelines enabling same-day RCA on prototype runs.</li>
               </ul>
             </div>
           </div>
 
-          {/* PwC Earlier Roles */}
+          {/* PwC — Earlier Roles */}
           <div className="relative pl-10 border-l-2 pb-12">
             <div className="absolute -left-2 top-0 w-5 h-5 rounded-full bg-primary"></div>
             <div>
-              <h3 className="text-xl font-bold">Manager / Senior Associate / Associate</h3>
+              <h3 className="text-xl font-bold">PwC — Manager / Senior Associate / Associate (2017–2022)</h3>
               <ul className="text-muted-foreground space-y-2 list-disc pl-5">
-                <li>
-                  <strong>Aerospace & Defense:</strong> Delivered continuous-improvement
-                  platform on Azure; reduced corrective-action loop time by ~30%.
-                </li>
-                <li>
-                  <strong>Consumer Goods:</strong> Built supply-visibility control tower
-                  across 100+ sources and 30 suppliers—protected ~1M PCBAs amid
-                  shortages.
-                </li>
-                <li>
-                  <strong>Navy Supplier:</strong> Make-vs-buy ML segmentation identified
-                  $13M cost gap → $6M savings.
-                </li>
-                <li>
-                  <strong>Power Tools Manufacturer:</strong> Labor-analytics platform
-                  improved OEE by 15%, unlocking >$2M savings.
-                </li>
+                <li><strong>Consumer goods OEM:</strong> Built supply control tower (30 suppliers) protecting ~1M PCBAs during shortage.</li>
+                <li><strong>Navy supplier:</strong> Make‑vs‑buy ML segmentation identified $13M gap; realized ~$6M savings.</li>
+                <li><strong>Power tools OEM:</strong> Labor analytics improved OEE by 15% and unlocked &gt;$2M savings.</li>
               </ul>
             </div>
           </div>
