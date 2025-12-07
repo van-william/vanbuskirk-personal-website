@@ -38,6 +38,13 @@ export function Footer() {
                   Blog
                 </NavLink>
               </li>
+              {/*
+              <li>
+                <NavLink to="/reading" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Reading
+                </NavLink>
+              </li>
+              */}
               <li>
                 <NavLink to="/photography" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                   Photography

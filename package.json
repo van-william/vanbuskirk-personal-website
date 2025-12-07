@@ -48,6 +48,8 @@
     "@tanstack/react-query": "^5.56.2",
     "@types/dompurify": "^3.0.5",
     "@types/prismjs": "^1.26.5",
+    "baseline-browser-mapping": "^2.9.4",
+    "caniuse-lite": "^1.0.30001759",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cmdk": "^1.0.0",

@@ -21,6 +21,7 @@ import ExternalRedirect from "./components/ExternalRedirect";
 import OpenAIPage from "./pages/OpenAI";
 import IOPage from "./pages/IO";
 import LetsTalkPage from "./pages/LetsTalk";
+import ReadingPage from "./pages/Reading";
 
 const queryClient = new QueryClient();
 
@@ -36,6 +37,7 @@ const App = () => (
               <Route path="/" element={<HomePage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/projects" element={<ProjectsPage />} />
+              <Route path="/reading" element={<ReadingPage />} />
               <Route path="/blog" element={<BlogPage />} />
               <Route path="/blog/:slug" element={<BlogPostPage />} />
               <Route path="/photography" element={<PhotographyPage />} />
