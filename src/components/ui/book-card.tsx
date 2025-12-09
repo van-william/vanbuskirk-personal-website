@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Book } from "@/types/book";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -9,6 +10,8 @@ interface BookCardProps {
 }
 
 export function BookCard({ book, className }: BookCardProps) {
+  const isInternalLink = (url: string) => url.startsWith("/") && !url.startsWith("//");
+
   return (
     <div
       className={cn(
@@ -46,9 +49,13 @@ export function BookCard({ book, className }: BookCardProps) {
               className="w-fit bg-white text-black hover:bg-white/90 opacity-0 transition duration-300 group-hover:opacity-100"
               asChild
             >
-              <a href={book.articleLink} target="_blank" rel="noopener noreferrer">
-                Read notes
-              </a>
+              {isInternalLink(book.articleLink) ? (
+                <Link to={book.articleLink}>Read notes</Link>
+              ) : (
+                <a href={book.articleLink} target="_blank" rel="noopener noreferrer">
+                  Read notes
+                </a>
+              )}
             </Button>
           )}
         </div>
