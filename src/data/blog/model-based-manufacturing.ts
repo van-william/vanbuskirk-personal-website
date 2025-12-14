@@ -186,13 +186,11 @@ It falls short when models cannot survive contact with reality.
 
 The next phase of MBE is not about richer abstractions—it is
 about **architectures that allow models to be instantiated, tested,
-adapted, and learned from in the real world**.
-
-Open, composable manufacturing systems are not a nice-to-have. They
+adapted, and learned from in the real world**. Open, composable
+manufacturing systems are not a nice-to-have. They
 are the missing half of the system double-V.
 
 Until engineering intent and manufacturing execution share a living,
-bidirectional connection, the digital thread remains aspirational—and
-the promise of MBE remains unfinished.
+bidirectional connection, the digital thread of MBE remains aspirational at best.
 `,
 };

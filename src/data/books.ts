@@ -20,7 +20,7 @@ export const books: Book[] = [
       "Simplfies much of Rene Girard's work on mimetic desire, scapegoats, and more. ",
     imageUrl:
       "https://m.media-amazon.com/images/I/81HazV6A88L._AC_UF1000,1000_QL80_.jpg",
-  },
+  }, 
   // {
   //   id: "great-divorce",
   //   title: "The Great Divorce",
@@ -30,15 +30,15 @@ export const books: Book[] = [
   //   imageUrl:
   //     "https://images.unsplash.com/photo-1463320898484-cdee8141c787?auto=format&fit=crop&w=1200&q=80",
   // },
-  // {
-  //   id: "visual-display",
-  //   title: "The Visual Display of Quantitative Information",
-  //   author: "Edward Tufte",
-  //   summary:
-  //     "Foundations of clean, truthful visualization—small multiples, sparklines, and data-ink ratios for signal-first storytelling.",
-  //   imageUrl:
-  //     "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1200&q=80",
-  // },
+  {
+    id: "visual-display-information",
+    title: "The Visual Display of Quantitative Information",
+    author: "Edward Tufte",
+    summary:
+      "Beautiful book on core principles of telling a story with data",
+    imageUrl:
+      "https://m.media-amazon.com/images/I/81ud7Ri9kFL._AC_UF1000,1000_QL80_.jpg",
+  },
   // {
   //   id: "beginning-of-infinity",
   //   title: "The Beginning of Infinity",
